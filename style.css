@@ -12,16 +12,57 @@
 
 body {
     background-color: var(--color-primary);
+    position: relative;
 }
 
-section {
-    width: 100%;
+body > img {
     height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: end;
+    position: absolute;
+    top: 0;
+    right: 0;
 }
 
-section img:first-child {
+.container {
+    max-width: 70%;
+    height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container img {
     height: 500px;
+    z-index: 1;
+}
+
+@media screen and (max-width: 992px) {
+    .container img {
+        height: 350px;
+    }
+}
+
+@media screen and (max-width: 785px) {
+    .container img {
+        height: 280px;
+    }
+}
+
+@media screen and (max-width: 680px) {
+    .container {
+        position: relative;
+        justify-content: center;
+    }
+    .container img {
+        height: 250px;
+        position: absolute;
+        bottom: 30px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .container {
+        position: relative;
+        justify-content: center;
+    }
 }
